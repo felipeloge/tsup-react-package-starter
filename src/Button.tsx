@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -15,7 +14,7 @@ const Button = React.forwardRef<
     <button
       type={type}
       ref={ref}
-      className={clsx('Button', className)}
+      className={className}
       {...props}
     />
   );
