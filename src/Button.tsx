@@ -1,25 +1,7 @@
 import React from 'react';
-import { cva, type VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 
-const buttonVariants = cva('Button', {
-  variants: {
-    variant: {
-      contained: 'ButtonContained',
-      outline: 'ButtonOutline',
-    },
-    color: {
-      primary: 'ButtonPrimary',
-      secondary: 'ButtonSecondary',
-    },
-  },
-  defaultVariants: {
-    variant: 'contained',
-    color: 'primary',
-  },
-});
-
-interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'color'>, VariantProps<typeof buttonVariants> {}
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const Button = React.forwardRef<
   HTMLButtonElement,
@@ -27,15 +9,13 @@ const Button = React.forwardRef<
 >(({
   className,
   type = 'button',
-  variant,
-  color,
   ...props
 }, ref) => {
   return (
     <button
       type={type}
       ref={ref}
-      className={clsx(buttonVariants({ variant, color }), className)}
+      className={clsx('Button', className)}
       {...props}
     />
   );
