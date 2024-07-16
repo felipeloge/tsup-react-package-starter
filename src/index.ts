@@ -1,3 +1,3 @@
-export * from './Example';
-export * from './HelloWorld';
-export * from './Toggle';
+export { Example } from './Example';
+export { HelloWorld } from './HelloWorld';
+export { Toggle } from './Toggle';
