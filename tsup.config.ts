@@ -10,5 +10,6 @@ export default defineConfig({
   splitting: false,
   format: ['cjs', 'esm'],
   external: ['react'],
+  noExternal: ['@radix-ui/react-toggle', 'class-variance-authority', 'clsx'],
   injectStyle: false,
 });
