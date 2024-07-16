@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 
@@ -9,7 +10,7 @@ const Button: React.FC = ({
 }: ButtonProps) => (
   <button
     type={type}
-    className={className}
+    className={clsx('Button', className)}
     {...props}
   />
 );
