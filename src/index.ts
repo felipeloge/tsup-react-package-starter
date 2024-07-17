@@ -1,3 +1,2 @@
-export * from './components/Example';
+export * from './components/CountButton';
 export * from './components/HelloWorld';
-export * from './components/Button';
