@@ -2,9 +2,7 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  treeshake: {
-    moduleSideEffects: 'no-external',
-  },
+  treeshake: true,
   // sourcemap: 'inline',
   // minify: true,
   clean: true,

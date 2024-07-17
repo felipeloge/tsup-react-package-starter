@@ -1,3 +1,3 @@
-export { Example } from './Example';
-export { HelloWorld } from './HelloWorld';
-export { Button, buttonVariants } from './Button';
+export * from './components/Example';
+export * from './components/HelloWorld';
+export * from './components/Button';
