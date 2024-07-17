@@ -2,7 +2,7 @@ import './Example.css';
 
 import React from 'react';
 
-export type ExampleProps = {
+type ExampleProps = {
   text?: String;
 };
 

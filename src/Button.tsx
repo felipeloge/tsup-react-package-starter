@@ -20,13 +20,13 @@ const buttonVariants = cva('Toggle', {
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonVariants> {} {}
 
-const Button: React.FC = ({
+const Button: React.FC<ButtonProps> = ({
   className,
   type = 'button',
   variant,
   size,
   ...props
-}: ButtonProps) => (
+}) => (
   <button
     type={type}
     className={clsx(buttonVariants({ variant, size, className }))}
